@@ -11,10 +11,3 @@ cmake .. -DCMAKE_PREFIX_PATH=`python -c 'import torch;print(torch.utils.cmake_pr
 make
 ```
 
-## Run with 2 threads
-```
-export OMP_NUM_THREADS=2
-numactl -C 0-1 -m 0 ./example-app
-```
-Got different results at `BS15` and `class1` in single thread and multi-thread count
-
